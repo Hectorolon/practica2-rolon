@@ -3,7 +3,7 @@
 // Initialize site configuration
 require_once('includes/config.inc.php');
 
-// Check the querystring for a numeric id
+// Check the querystring for a numeric id 
 if (isset($_GET['id']) && intval($_GET['id']) > 0) {
 	
 	// Get id from querystring

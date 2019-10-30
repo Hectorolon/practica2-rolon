@@ -70,7 +70,7 @@ angular.module('app', [])
 
 		$scope.delete = function ($id) 
 		{
-			$http.delete('./delete.php?index=1&id=' + $id, $scope.persona)
+			$http.get('delete.php?index=1&id=' + $id, $scope.persona)
 				.then(function(res) {
 					console.log("Delete:");
 					console.log(res.data);
