@@ -1,0 +1,25 @@
+version: '3.3'
+services:
+  web:
+    build:
+      context: ../practica2-rolon/
+      dockerfile: dockerfile
+    container_name: php7X-apache
+    depends_on:
+      - basededatos
+    volumes:
+      - ../practica2-rolon/:/var/www/html/
+    ports:
+      - 80:80
+  basededatos:
+    image: mysql:latest
+    container_name: bdmysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: r00t
+      MYSQL_DATABASE: myInfo
+      MYSQL_USER: root
+      MYSQL_PASSWORD: r00t
+    ports:
+      - 3306:3306

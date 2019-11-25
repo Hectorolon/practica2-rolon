@@ -6,6 +6,7 @@
 	<script src="<?php echo $url;?>assets/js/bootstrap.min.js"></script>
 	<script src="<?php echo $url;?>assets/js/tooltip.js"></script>
 	<script src="<?php echo $url;?>assets/js/angular.js"></script>
+	<script src="<?php echo $url;?>assets/js/popper.js"></script>
 
 	<div class="container">
       <div class="row">
